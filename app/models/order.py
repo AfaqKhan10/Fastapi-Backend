@@ -11,7 +11,7 @@ class OrderStatus(enum.Enum):
     delivered = "delivered"
     cancelled = "cancelled"
 
-# Payment status alag enum — isliye "paid" error nahi aayega
+
 class PaymentStatus(enum.Enum):
     unpaid = "unpaid"
     paid = "paid"
@@ -25,7 +25,6 @@ class Order(Base):
     restaurant_id = Column(Integer, ForeignKey("restaurants.id"))
     total_price = Column(Float, nullable=False)
     status = Column(Enum(OrderStatus), default=OrderStatus.pending)
-    # payment_status = Column(Enum(PaymentStatus), default=PaymentStatus.unpaid)  # ← NAYA COLUMN
     created_at = Column(DateTime, default=datetime.utcnow)
     address = Column(String, nullable=False)
 
