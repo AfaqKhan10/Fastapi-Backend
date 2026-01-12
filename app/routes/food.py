@@ -4,7 +4,7 @@ from app.database import get_db
 from app.models.food import Food
 from app.models.restaurant import Restaurant
 from app.models.user import User
-from app.routes.restaurant import get_current_user  # same dependency
+from app.routes.restaurant import get_current_user  
 from pydantic import BaseModel
 from typing import List
 
