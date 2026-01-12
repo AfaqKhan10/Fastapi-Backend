@@ -12,6 +12,3 @@ class Food(Base):
     restaurant_id = Column(Integer, ForeignKey("restaurants.id"), nullable=False)
 
     restaurant = relationship("Restaurant", back_populates="foods")
-
-    # Temporary comment — OrderItem relationship hata diya
-    # order_items = relationship("OrderItem", back_populates="food")
