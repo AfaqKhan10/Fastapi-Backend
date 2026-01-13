@@ -11,13 +11,6 @@ app.include_router(auth_router)
 app.include_router(restaurant_router)
 
 
-
-# @app.get("/")
-# def root():
-#     return {"message": "Backend is running"}
-
-
-
 from app.routes.food import router as food_router
 app.include_router(food_router)
 
