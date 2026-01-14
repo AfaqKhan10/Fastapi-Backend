@@ -18,10 +18,10 @@ config.set_main_option("sqlalchemy.url", os.getenv("DATABASE_URL"))
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# <-- YE SAB ADD KARO
+
 from app.database import Base
 target_metadata = Base.metadata
-# <-- YE TAK
+
 
 def run_migrations_offline() -> None:
     url = config.get_main_option("sqlalchemy.url")
