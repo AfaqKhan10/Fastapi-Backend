@@ -18,7 +18,6 @@ class User(Base):
     password = Column(String, nullable=False)
     role = Column(Enum(UserRole), default=UserRole.customer, nullable=False)
 
-    # One user → many restaurants
     restaurants = relationship(
         "Restaurant",
         back_populates="owner",
