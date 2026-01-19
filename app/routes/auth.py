@@ -43,7 +43,7 @@ def login(user: UserLogin, db: Session = Depends(get_db)):
     if not db_user or not verify_password(user.password, db_user.password):
         raise HTTPException(status_code=401, detail="Invalid email or password")
     
-    # JWT token banao jisme user id ho
+    
     access_token = create_access_token({"sub": str(db_user.id)})
     
     return {
@@ -56,13 +56,13 @@ def login(user: UserLogin, db: Session = Depends(get_db)):
         }
     }
 
-
 def verify_token(token: str):
     try:
         payload = jwt.decode(token, os.getenv("SECRET_KEY"), algorithms=["HS256"])
         return payload
     except:
         return None
+
 
 @router.get("/me")
 def get_me(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme), db: Session = Depends(get_db)):
