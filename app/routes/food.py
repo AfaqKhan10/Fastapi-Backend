@@ -25,7 +25,7 @@ class FoodResponse(BaseModel):
     class Config:
         from_attributes = True
 
-# Owner apne restaurant mein food item add kare
+
 @router.post("/{restaurant_id}", response_model=FoodResponse)
 def add_food_item(
     restaurant_id: int,
