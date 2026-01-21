@@ -33,7 +33,7 @@ def add_food_item(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    # Check if restaurant belongs to current user
+    
     restaurant = db.query(Restaurant).filter(Restaurant.id == restaurant_id, Restaurant.owner_id == current_user.id).first()
     if not restaurant:
         raise HTTPException(status_code=403, detail="You can only add food to your own restaurant")
