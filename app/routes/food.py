@@ -50,7 +50,7 @@ def get_restaurant_menu(restaurant_id: int, db: Session = Depends(get_db)):
     items = db.query(Food).filter(Food.restaurant_id == restaurant_id).all()
     return items
 
-# All food items (optional)
+
 @router.get("/", response_model=List[FoodResponse])
 def get_all_food(db: Session = Depends(get_db)):
     return db.query(Food).all()
