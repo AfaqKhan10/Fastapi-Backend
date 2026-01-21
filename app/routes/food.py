@@ -44,7 +44,7 @@ def add_food_item(
     db.refresh(new_food)
     return new_food
 
-# Restaurant ka menu browse (public - koi bhi dekh sake)
+
 @router.get("/{restaurant_id}", response_model=List[FoodResponse])
 def get_restaurant_menu(restaurant_id: int, db: Session = Depends(get_db)):
     items = db.query(Food).filter(Food.restaurant_id == restaurant_id).all()
