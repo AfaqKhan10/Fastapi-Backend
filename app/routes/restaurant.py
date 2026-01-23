@@ -11,7 +11,6 @@ from app.core.jwt import SECRET_KEY, ALGORITHM
 
 router = APIRouter(prefix="/restaurants", tags=["Restaurants"])
 
-# Clean Bearer token scheme for Swagger
 bearer_scheme = HTTPBearer()
 
 class RestaurantCreate(BaseModel):
