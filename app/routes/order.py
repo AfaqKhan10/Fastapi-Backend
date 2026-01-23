@@ -12,7 +12,7 @@ from datetime import datetime
 
 router = APIRouter(prefix="/orders", tags=["Orders"])
 
-# Pydantic models
+
 class OrderItemCreate(BaseModel):
     food_id: int
     quantity: int
