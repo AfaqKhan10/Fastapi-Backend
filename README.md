@@ -29,5 +29,3 @@ Users can register, browse restaurants and menus, place orders, track deliveries
 - **CORS**: Enabled for frontend integration
 - **Testing**: pytest (recommended)
 - **ASGI Server**: Uvicorn
-
-
