@@ -4,7 +4,7 @@ A modern, secure, and scalable RESTful API backend for a food ordering and deliv
 
 Users can register, browse restaurants and menus, place orders, track deliveries, while restaurant owners can manage their menu items and update order statuses. The system handles authentication, authorization, cart management, and basic order processing.
 
-## ✨ Features
+##  Features
 
 - **User & Restaurant Authentication** using JWT (OAuth2 Password Flow)
 - Role-based access: Customer, Restaurant Owner (Admin optional)
@@ -19,7 +19,7 @@ Users can register, browse restaurants and menus, place orders, track deliveries
 - Interactive API documentation (Swagger UI & ReDoc)
 - Async support for better performance
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework**: FastAPI (Python 3.10+)
 - **Database**: PostgreSQL + SQLAlchemy (ORM) + Alembic (migrations)
